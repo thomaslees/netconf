@@ -1,7 +1,3 @@
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
-
-# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
 VAGRANTFILE_API_VERSION = "2"
 
 $bootstrap_ubuntu = <<SCRIPT
@@ -29,12 +25,8 @@ SCRIPT
 
 $install_pyang = <<SCRIPT
 cd /root/
-#wget https://pyang.googlecode.com/files/pyang-1.4.1.tar.gz
-#rm pyang*
 wget https://github.com/mbj4668/pyang/archive/pyang-1.4.1.zip
 unzip pyang-1.4.1.zip
-#tar -xf pyang-1.5.tar.gz
-#rm -f pyang-1.5.tar.gz
 cd pyang-pyang-1.4.1
 python setup.py install
 SCRIPT
